@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, Image as ImageIcon, MessageSquare, AlertTriangle, List, FileImage,
   Tag, X, CheckCircle2, Layers, Database, Maximize, BarChart3, Type,
-  FileDigit, ChevronDown, Sparkles
+  FileDigit, ChevronDown, Sparkles, Github
 } from 'lucide-react';
 
 import sample1 from '../../assets/Multimodal_classification/sample1.png';
@@ -183,19 +183,31 @@ const MultimodalClassification = () => {
 
       {/* HERO SECTION */}
       <section className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 rounded-[3rem] p-12 text-white shadow-2xl relative overflow-hidden">
-        <div className="relative z-10 max-w-4xl">
-          <motion.span
-            initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
-            className="bg-indigo-500/20 text-indigo-300 px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-6 inline-block border border-indigo-500/30"
+        <div className="relative z-10 max-w-5xl flex flex-col lg:flex-row gap-8 justify-between items-start lg:items-center">
+          <div className="max-w-4xl">
+            <motion.span
+              initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
+              className="bg-indigo-500/20 text-indigo-300 px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase mb-6 inline-block border border-indigo-500/30"
+            >
+              Assignment 1 • Zero-Shot & Few-Shot Vision-Language classification
+            </motion.span>
+            <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter leading-[1.1]">
+              Multimodal <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Classification</span>
+            </h1>
+            <p className="text-slate-400 text-xl leading-relaxed max-w-2xl">
+              Exploring state-of-the-art vision-language models on the Flickr30k dataset. From automated label generation to Zero-Shot and Few-Shot evaluation.
+            </p>
+          </div>
+          <motion.a
+            initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
+            href="https://github.com/NaNaBoo311/CV_MultimodalClassification" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-2xl font-bold transition-all border border-white/10 hover:border-white/30 shadow-lg hover:shadow-xl hover:-translate-y-1 whitespace-nowrap mt-4 lg:mt-0"
           >
-            Assignment 1 • Zero-Shot & Few-Shot Vision-Language classification
-          </motion.span>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter leading-[1.1]">
-            Multimodal <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Classification</span>
-          </h1>
-          <p className="text-slate-400 text-xl leading-relaxed mb-8 max-w-2xl">
-            Exploring state-of-the-art vision-language models on the Flickr30k dataset. From automated label generation to Zero-Shot and Few-Shot evaluation.
-          </p>
+            <Github size={24} />
+            Repository
+          </motion.a>
         </div>
       </section>
 
